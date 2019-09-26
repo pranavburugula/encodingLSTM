@@ -1,10 +1,13 @@
 from keras.models import LSTM, Sequential, Bidirectional, Dense
 import numpy as np
 import pandas
-from scipy import scikit
+from sklearn.datasets import fetch_20newsgroups_vectorized
 
 if __name__ == "__main__":
-    dataset = np.load
+    train = fetch_20newsgroups_vectorized(subset='train')
+    test = fetch_20newsgroups_vectorized(subset='test')
+    model = Sequential()
+    createModel(model, [])
     pass
 
 def createModel(model, model_structure, input_shape):
